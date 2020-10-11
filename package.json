@@ -1,0 +1,26 @@
+{
+  "name": "good-readme-generator",
+  "version": "1.0.0",
+  "description": "A readme file generator, to aid in the speed of the development process.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LouisYS-Carleton/Good-README-Generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator"
+  ],
+  "author": "Louis Yacksmith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LouisYS-Carleton/Good-README-Generator/issues"
+  },
+  "homepage": "https://github.com/LouisYS-Carleton/Good-README-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
