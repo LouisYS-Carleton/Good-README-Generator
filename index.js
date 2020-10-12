@@ -1,38 +1,59 @@
+const fs = require('fs')
+const inquirer = require("inquirer")
+const generateMarkdown = require('./utils/generateMarkdown.js')
+
 const questions = [
-    {
+      {
         type: 'input',
         name: 'name',
-        message: 'What is your name?'
-      },
-      {
-        type: 'input',
-        name: 'location',
-        message: 'Where are you from?'
-      },
-      {
-        type: 'input',
-        name: 
-        'hobby',
-        message: 'What is your favourite hobby?'
-      },
-      {
-        type: 'input',
-        name: 'food',
-        message: 'What is your favourite food?'
+        message: 'Please enter your name.'
       },
       {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username'
+        message: 'Please enter your Github username.'
       },
       {
         type: 'input',
-        name: 'linkedin',
-        message: 'Enter your LinkedIn URL.'
+        name: 'credits',
+        message: 'Please enter the names of any project collaborators, separated by commas.'
+      },
+      {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email.',
+      },
+      {
+        type: 'input',
+        name: 'title',
+        message: "Please enter your project's title."
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Please enter a brief description of your project.'
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'Which license would you like to use?',
+        choices: [
+          "APACHE 2.0", 
+          "MIT", 
+          "GPL 3.0", 
+          "MPL 2.0", 
+          "None"
+        ]
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Please enter any tests you have relating to your project.'
       }
 ];
 
 function writeToFile(fileName, data) {
+
 }
 
 function init() {
