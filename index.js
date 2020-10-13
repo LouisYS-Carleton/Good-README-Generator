@@ -2,7 +2,50 @@ const fs = require('fs')
 const inquirer = require("inquirer")
 const generateMarkdown = require('./utils/generateMarkdown.js')
 
-const questions = [
+const userQuestions = [
+      {
+        type: 'input',
+        name: 'title',
+        message: "Please enter your project's title."
+      },
+      {
+        type: 'input',
+        name: 'description',
+        message: 'Please enter a brief description of your project.'
+      },
+      {
+        type: 'input',
+        name: 'installation',
+        message: 'Please enter a brief explanation on how to install your project.'
+      },
+      {
+        type: 'input',
+        name: 'usage',
+        message: 'Please provide instructions and any examples needed for your project.'
+      },
+      {
+        type: 'input',
+        name: 'credits',
+        message: 'Please enter the Github URL of any project collaborator(s), separated by commas.'
+      },
+      {
+        type: 'list',
+        name: 'license',
+        message: 'Which license would you like to use?',
+        choices: [
+          "Eclipse", 
+          "ISC",
+          "APACHE 2.0", 
+          "MIT", 
+          "MPL 2.0", 
+          "None"
+        ]
+      },
+      {
+        type: 'input',
+        name: 'tests',
+        message: 'Please enter any tests you have relating to your project.'
+      },
       {
         type: 'input',
         name: 'name',
@@ -15,49 +58,28 @@ const questions = [
       },
       {
         type: 'input',
-        name: 'credits',
-        message: 'Please enter the names of any project collaborators, separated by commas.'
-      },
-      {
-        type: 'input',
         name: 'email',
         message: 'Please enter your email.',
       },
-      {
-        type: 'input',
-        name: 'title',
-        message: "Please enter your project's title."
-      },
-      {
-        type: 'input',
-        name: 'description',
-        message: 'Please enter a brief description of your project.'
-      },
-      {
-        type: 'list',
-        name: 'license',
-        message: 'Which license would you like to use?',
-        choices: [
-          "APACHE 2.0", 
-          "MIT", 
-          "GPL 3.0", 
-          "MPL 2.0", 
-          "None"
-        ]
-      },
-      {
-        type: 'input',
-        name: 'tests',
-        message: 'Please enter any tests you have relating to your project.'
-      }
 ];
 
 function writeToFile(fileName, data) {
-
+  fs.writeFile(fileName, data, function (err) {
+    if (err) {
+      return console.log(err)
+    }
+    console.log("README has been successfully completed.")
+  })
 }
 
 function init() {
-
+  inquirer
+  .prompt(userQuestions)
+  .then(function (userResponse) {
+    let userAnswers = JSON.stringify(userResponse)
+    const markdown = generateMarkdown(userAnswers)
+    writeToFile("./Test\ README\ sample/README.md", markdown)
+  })
 }
 
 init();
