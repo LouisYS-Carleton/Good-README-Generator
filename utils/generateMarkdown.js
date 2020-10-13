@@ -7,25 +7,24 @@ function generateMarkdown(data) {
 if (userData.license === "Eclipse") {
   badge = `[![License](https://img.shields.io/badge/License-EPL%201.0-red.svg)](https://opensource.org/licenses/EPL-1.0)`
   } else if (userData.license === "ISC") {
-    `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
+    badge = `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`
   } else if (userData.license === "APACHE 2.0") {
-    `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+    badge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
   } else if (userData.license === "MIT") {
-    `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+    badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
   } else if (userData.license === "MPL 2.0") {
-    `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+    badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
   } else if (userData.license === "None") {
     `[![License: None]`
   }
 
 // Markdown Start
-  return `
-  # ${userData.title}
+  return `# ${userData.title}
 
   ## Description: 
   ${userData.description}
 
-  ## Table of Contents
+  ## Table of Contents:
   • Installation
   • Usage
   • Credits
@@ -33,7 +32,7 @@ if (userData.license === "Eclipse") {
   • Contributing
   • Tests
 
-  ## Installation
+  ## Installation:
   ${userData.installation}
 
   ## Usage
@@ -43,15 +42,18 @@ if (userData.license === "Eclipse") {
   ${userData.credits}
 
   ## License
-  ${userData.license}
+  ${userData.license} 
+  ${badge}
 
   ## Tests
   ${userData.tests}
+
+
 
   ${userData.name}
   ${userData.github}
   ${userData.email}
 `;
-
 }
+
 module.exports = generateMarkdown;
