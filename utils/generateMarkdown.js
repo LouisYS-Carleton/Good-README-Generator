@@ -20,39 +20,38 @@ if (userData.license === "Eclipse") {
 
 // Markdown Start
   return `# ${userData.title}
+  ${badge}
 
-  ## Description: 
-  ${userData.description}
-
+  ${userData.description}  
+  <br/>
   ## Table of Contents:
-  * Installation
-  * Usage
-  * Credits
-  * License
-  * Contributing
-  * Tests
+  * [Installation](#installation)
+  * [Usage](#usage)
+  * [Credits](#credits)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions) 
 
   ## Installation:
   ${userData.installation}
 
-  ## Usage
+  ## Usage:
   ${userData.usage}
 
-  ## Credits
+  ## Credits:
   ${userData.credits}
 
-  ## License
-  ${userData.license} 
-  ${badge}
+  ## Contributing:
+  ${userData.contributing}
 
-  ## Tests
-  ${userData.tests}
-
-
-
-  ${userData.name}
-  ${userData.github}
-  ${userData.email}
+  ## Tests:
+  ${userData.tests}  
+  <br/>
+  ## Questions:
+  * ${userData.name}
+  * https://github.com/${userData.github}
+  * ${userData.email}
+  * ${userData.alternative}
 `;
 }
 

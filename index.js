@@ -29,6 +29,11 @@ const userQuestions = [
         message: 'Please enter the Github URL of any project collaborator(s), separated by commas.'
       },
       {
+        type: 'input',
+        name: 'contributing',
+        message: 'Please enter any links and/or instructions on how users can contribute to your project.'
+      },
+      {
         type: 'list',
         name: 'license',
         message: 'Which license would you like to use?',
@@ -61,6 +66,11 @@ const userQuestions = [
         name: 'email',
         message: 'Please enter your email.',
       },
+      {
+        type: 'input',
+        name: 'alternative',
+        message: 'Please enter any other information about your contact info and/or another communication method of your choice.',
+      }
 ];
 
 function writeToFile(fileName, data) {
