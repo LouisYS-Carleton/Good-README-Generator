@@ -25,12 +25,12 @@ if (userData.license === "Eclipse") {
   ${userData.description}
 
   ## Table of Contents:
-  • Installation
-  • Usage
-  • Credits
-  • License
-  • Contributing
-  • Tests
+  * Installation
+  * Usage
+  * Credits
+  * License
+  * Contributing
+  * Tests
 
   ## Installation:
   ${userData.installation}
