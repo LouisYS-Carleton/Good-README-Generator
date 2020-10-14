@@ -8,12 +8,12 @@ https://youtu.be/L2Zw7D0bZsY
 <img src="./Assets/README.png" alt="Generated README file">
 
 ## Table of Contents:
-* Installation
-* Usage
-* Credits
-* Contributing
-* Tests
-* Questions
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [Contributing](#contributing)
+* [Tests](#tests)
+* [Questions](#questions) 
 
 ## Installation:
 It's important to run "npm install" in your terminal before launching this application to ensure you have all the necessary files.
