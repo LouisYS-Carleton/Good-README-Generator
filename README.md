@@ -5,7 +5,7 @@ A README.md file generator, designed to help developers speed up the often repet
 https://youtu.be/L2Zw7D0bZsY
 
 <img src="./Assets/terminal.png" alt="Terminal prompts">
-<img src="./Assets/READMEgen.png" alt="Generated README file">
+<img src="./Assets/README.png" alt="Generated README file">
 
 ## Table of Contents:
 * Installation
