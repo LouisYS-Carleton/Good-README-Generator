@@ -1,8 +1,11 @@
 # Professional README Generator
 A README.md file generator, designed to help developers speed up the often repetitive task of writing professional README files.
 
-<img src="" alt="">
-<img src="" alt="">
+## Video Link
+https://youtu.be/L2Zw7D0bZsY
+
+<img src="./Assets/terminal.png" alt="Terminal prompts">
+<img src="./Assets/READMEgen.png" alt="Generated README file">
 
 ## Table of Contents:
 * Installation
@@ -13,16 +16,16 @@ A README.md file generator, designed to help developers speed up the often repet
 * Questions
 
 ## Installation:
-It's important to run "npm install" in your terminal before launching this application to ensure you have all the necessary files. Once you have done so, simply type "node.js" in your terminal, hit enter, and then follow the prompts.
+It's important to run "npm install" in your terminal before launching this application to ensure you have all the necessary files.
 
 ## Usage:
-Make sure you do not have any existing README files in the target directory, as they will be overwritten.
+Once you have run npm install in your terminal, simply type "node.js", hit enter, and then follow the prompts. Make sure you do not have any existing README files in the target directory, as they will be overwritten.
 
 ## Credits:
 None
 
 ## Contributing:
-If you have any questions please feel free to get in touch with me through one of the links in the "Questions" section below. This project is open source, so please feel free to use it in any way you see fit!
+This project is open source, so please feel free to use it in any way you see fit! If you have any questions please feel free to get in touch with me through one of the links in the "Questions" section below.
 
 ## Tests:
 Test README generator once before creating final copy, just to ensure everything is to your liking.
